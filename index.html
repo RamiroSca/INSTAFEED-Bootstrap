@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,92 +10,247 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="container-fluid bg-secondary">
+    <div class="container-fluid bg-secondary bg-light">
         <nav class="navbar bg-body-tertiary">
             <div class="container-fluid">
-                <i class="fa-brands fa-instagram"></i>
-                <a class="navbar-brand">Instagram</a>
+                <i class="fa-brands fa-instagram w-50"><img class="w-25"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1024px-Instagram_logo.svg.png" /></i>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Launch demo modal
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                ...
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="d-flex p-2">
+                    <button type="button" class="btn btn-primary bg-success border border-success mx-2"
+                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Create a new post
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <h5>Caption:</h5>
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a comment here"
+                                            id="floatingTextarea2" style="height: 100px"></textarea>
+                                        <label for="floatingTextarea2">Comments</label>
+                                    </div>
+                                    <div class="m-2">
+                                        <button type="button" class="btn btn-secondary"><i
+                                                class="fa-solid fa-camera"></i></button>
+                                        <button type="button" class="btn btn-secondary"><i
+                                                class="fa-solid fa-location-dot"></i></button>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-success">Publish</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown button
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Profile</button></li>
+                            <li><button class="dropdown-item" type="button">Accesibility</button></li>
+                            <li><button class="dropdown-item border-bottom" type="button">Privacy and Data</button></li>
+                            <li><button class="dropdown-item text-danger" type="button">Log out</button></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs justify-content-center bg-light" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i
+                        class="fa-solid fa-table-cells"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i
+                        class="fa-solid fa-square-full"></i></button>
             </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><div class="row">
-                <div class="col-4  px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+        </ul>
+        <div class="tab-content bg-light" id="myTabContent">
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+                tabindex="0">
+                <div class="row">
+                    <div class="col-4  px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/19406925/pexels-photo-19406925/free-photo-of-paisaje-naturaleza-campo-hierba.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2 "
+                            src="https://images.pexels.com/photos/19400090/pexels-photo-19400090/free-photo-of-plato-hombre-cafe-taza.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/19375004/pexels-photo-19375004/free-photo-of-plato-cafeina-cafe-taza.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/343685/pexels-photo-343685.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/4032024/pexels-photo-4032024.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/11551694/pexels-photo-11551694.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/3871773/pexels-photo-3871773.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/7752793/pexels-photo-7752793.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
+                    <div class="col-4 px-0">
+                        <img class="w-100 p-2"
+                            src="https://images.pexels.com/photos/4450430/pexels-photo-4450430.jpeg?auto=compress&cs=tinysrgb&w=600"
+                            alt="">
+                    </div>
                 </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div>
-                <div class="col-4 px-0">
-                    <img class="w-100" src="https://picsum.photos/seed/picsum/200/300" alt="">
-                </div></div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
             </div>
-    </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+            <div class="tab-pane fade w-75 container" id="profile-tab-pane" role="tabpanel"
+                aria-labelledby="profile-tab" tabindex="0">
+                <div class="big w-75 container border border-secondary my-2">
+                    <div class="encabezado d-flex">
+                        <div class="tiuto w-100">
+                            <h3>La Pradera</h3>
+                        </div>
+                        <div class="fecha float-end">16/12</div>
+                    </div>
+                    <div class="foto">
+                        <img class="w-100"
+                            src="https://images.pexels.com/photos/19406925/pexels-photo-19406925/free-photo-of-paisaje-naturaleza-campo-hierba.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="textos">
+                        <div class="likes"><strong>204 Likes</strong></div>
+                        <div class="parrafo p-3">
+                            <p>La pradera, un extenso tapiz verde que se despliega ante nuestros ojos, es un refugio de
+                                serenidad y belleza natural. Las suaves ondulaciones del terreno están salpicadas de una
+                                variedad de flores silvestres que danzan al compás de la brisa suave. Bajo el cielo azul
+                                inmaculado, las hierbas altas balancean sus espigas, creando una sinfonía visual que se
+                                extiende hasta donde alcanza la vista.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="big w-75 container border border-secondary my-2">
+                    <div class="encabezado d-flex">
+                        <div class="tiuto w-100">
+                            <h3>El Desayuno</h3>
+                        </div>
+                        <div class="fecha float-end">16/12</div>
+                    </div>
+                    <div class="foto">
+                        <img class="w-100"
+                            src="https://images.pexels.com/photos/19400090/pexels-photo-19400090/free-photo-of-plato-hombre-cafe-taza.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="textos">
+                        <div class="likes"><strong>210 Likes</strong></div>
+                        <div class="parrafo p-3">
+                            <p>
+                                El desayuno, esa primera y deliciosa paleta de sabores que despierta nuestros sentidos y
+                                nos prepara para el día por delante. En la mesa, se despliega un festín de
+                                posibilidades: la fragancia tentadora del café recién hecho se mezcla con el aroma
+                                reconfortante de pan tostado. Un tazón rebosante de frutas frescas, ya sea jugosas
+                                fresas o plátanos dorados, agrega un toque vibrante de color y vitalidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="big w-75 container border border-secondary my-2">
+                    <div class="encabezado d-flex">
+                        <div class="tiuto w-100">
+                            <h3>El Cafe</h3>
+                        </div>
+                        <div class="fecha float-end">16/12</div>
+                    </div>
+                    <div class="foto">
+                        <img class="w-100"
+                            src="https://images.pexels.com/photos/19375004/pexels-photo-19375004/free-photo-of-plato-cafeina-cafe-taza.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="textos">
+                        <div class="likes"><strong>108 Likes</strong></div>
+                        <div class="parrafo p-3">
+                            <p>El café, ese elixir oscuro que despierta los sentidos y acaricia el alma con su profundo
+                                sabor y aroma embriagador. En cada taza, se revela una historia rica y compleja, un
+                                viaje desde los campos de cultivo hasta la mesa. El vapor ascendente lleva consigo la
+                                promesa de una paleta de sabores que van desde las notas tostadas hasta las agridulces y
+                                afrutadas, creando una sinfonía de matices que danzan en el paladar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="big w-75 container border border-secondary my-2">
+                    <div class="encabezado d-flex">
+                        <div class="tiuto w-100">
+                            <h3>los Glaciares</h3>
+                        </div>
+                        <div class="fecha float-end">16/12</div>
+                    </div>
+                    <div class="foto">
+                        <img class="w-100"
+                            src="https://images.pexels.com/photos/343685/pexels-photo-343685.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="textos">
+                        <div class="likes"><strong>198 Likes</strong></div>
+                        <div class="parrafo p-3">
+                            <p>Los glaciares, testigos eternos de la majestuosidad y poder de la naturaleza, se
+                                extienden en un silencioso ballet de hielo y nieve. Estas masas colosales, esculpidas
+                                por el tiempo, parecen congelar el mismo aliento del viento que las rodea. Sus
+                                imponentes lenguas de hielo avanzan lentamente, dejando a su paso un rastro de serenidad
+                                y grandeza.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="big w-75 container border border-secondary my-2">
+                    <div class="encabezado d-flex">
+                        <div class="tiuto w-100">
+                            <h3>El Castor</h3>
+                        </div>
+                        <div class="fecha float-end">16/12</div>
+                    </div>
+                    <div class="foto">
+                        <img class="w-100"
+                            src="https://images.pexels.com/photos/4032024/pexels-photo-4032024.jpeg?auto=compress&cs=tinysrgb&w=600" />
+                    </div>
+                    <div class="textos">
+                        <div class="likes"><strong>250 Likes</strong></div>
+                        <div class="parrafo p-3">
+                            <p>Los castores, ingenieros maestros de los humedales, transforman su entorno con una
+                                dedicación incansable. Con incisivos afilados y patas hábiles, construyen complejas
+                                represas y lodazales que alteran el curso de los ríos y crean hábitats acuáticos
+                                prósperos. Su pelaje espeso y cola aplanada son herramientas perfectas para sumergirse
+                                en el agua en busca de alimento y construir sus intrincadas madrigueras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>
